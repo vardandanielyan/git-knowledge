@@ -30,3 +30,5 @@ def divide(a: float, b: float) -> float:
 
 APP_VERSION = "1.0.0"
 APP_NAME = "Git"
+
+exp = lambda a, b: a**b
