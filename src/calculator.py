@@ -28,6 +28,16 @@ def divide(a: float, b: float) -> float:
         raise ValueError("Cannot divide by zero!")
     return a / b
 
+
+def modulo(a: float, b: float) -> float:
+    """
+    Returns the remainder of dividing a by b.
+    Raises ValueError if b is zero.
+    """
+    if b == 0:
+        raise ValueError("Cannot modulo by zero!")
+    return a % b
+
 APP_VERSION = "1.0.0"
 APP_NAME = "Git"
 
