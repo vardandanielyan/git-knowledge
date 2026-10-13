@@ -1,10 +1,5 @@
-"""
-Main CLI Application
-Run with: python3 src/main.py
-"""
 import sys
-from src.calculator import add, subtract, multiply, divide, APP_NAME, APP_VERSION
-
+from src.calculator import *
 
 def print_banner():
     print("=" * 45)
@@ -48,8 +43,8 @@ def main():
             elif choice == "4":
                 res = divide(N1, N2)
                 print(f"Result: {N1} / {N2} = {res}")
-        except ValueError as e:
-            print(f"Error: {e}")
+        except ValueError as err:
+            print(f"Error: {err}")
         except KeyboardInterrupt:
             print("\nExiting...")
             sys.exit(0)
