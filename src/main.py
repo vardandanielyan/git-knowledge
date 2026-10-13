@@ -33,21 +33,21 @@ def main():
             continue
 
         try:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
+            N1 = float(input("Enter first number: "))
+            N2 = float(input("Enter second number: "))
 
             if choice == "1":
-                res = add(num1, num2)
-                print(f"Result: {num1} + {num2} = {res}")
+                res = add(N1, N2)
+                print(f"Result: {N1} + {N2} = {res}")
             elif choice == "2":
-                res = subtract(num1, num2)
-                print(f"Result: {num1} - {num2} = {res}")
+                res = subtract(N1, N2)
+                print(f"Result: {N1} - {N2} = {res}")
             elif choice == "3":
-                res = multiply(num1, num2)
-                print(f"Result: {num1} * {num2} = {res}")
+                res = multiply(N1, N2)
+                print(f"Result: {N1} * {N2} = {res}")
             elif choice == "4":
-                res = divide(num1, num2)
-                print(f"Result: {num1} / {num2} = {res}")
+                res = divide(N1, N2)
+                print(f"Result: {N1} / {N2} = {res}")
         except ValueError as e:
             print(f"Error: {e}")
         except KeyboardInterrupt:
