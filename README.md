@@ -15,6 +15,7 @@ git-knowledge/
 │   └── main.py            # Interactive CLI calculator app
 ├── tests/
 │   └── test_calculator.py # Unit tests
+├── AUTHENTICATION.md      # GitHub terminal authentication guide (SSH, CLI, PAT)
 ├── EXERCISES.md           # Step-by-step hands-on Git tutorial
 └── README.md              # Project documentation
 ```
@@ -23,12 +24,15 @@ git-knowledge/
 
 ## ⚡ Quick Start
 
-### 1. Run the Calculator Application
+### 1. Terminal Authentication
+New developer? First check **[`AUTHENTICATION.md`](AUTHENTICATION.md)** to authenticate your terminal with GitHub via **SSH**, **GitHub CLI**, or **PAT**.
+
+### 2. Run the Calculator Application
 ```bash
 python3 src/main.py
 ```
 
-### 2. Run the Test Suite
+### 3. Run the Test Suite
 ```bash
 python3 -m unittest discover -s tests
 ```

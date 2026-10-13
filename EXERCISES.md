@@ -6,13 +6,14 @@ Welcome to the hands-on Git practice guide! This guide takes you step-by-step th
 
 ## 🛠️ Prerequisites
 
-Clone the repository to your local machine:
+1. Ensure your terminal is authenticated with GitHub (see **[`AUTHENTICATION.md`](AUTHENTICATION.md)**).
+2. Clone the repository to your local machine:
 ```bash
 git clone git@github.com:vardandanielyan/git-knowledge.git
 cd git-knowledge
 ```
 
-Verify test suite runs:
+3. Verify test suite runs:
 ```bash
 python3 -m unittest discover -s tests
 ```
