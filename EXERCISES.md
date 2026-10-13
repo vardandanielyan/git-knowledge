@@ -194,6 +194,66 @@ APP_VERSION = "1.1.0-alpha"
 
 ---
 
+## 📌 Exercise 8: Cherry-Picking a Specific Commit (`git cherry-pick`)
+
+**Goal:** Copy a specific commit from another branch into your branch without merging everything.
+
+### 🎭 Real-World Scenario
+A teammate pushed a branch called `feature/scientific-ops`. That branch has **two commits**:
+1. `a89e31f` (`feat: add modulo operation with unit tests`) → **Finished, tested, ready to use!**
+2. `15a0a5f` (`wip: draft factorial function`) → **Unfinished broken draft!**
+
+You need the `modulo` operation on your branch right now, but you do **NOT** want to merge the unfinished `factorial` code. **Solution:** Cherry-pick!
+
+---
+
+### Step-by-Step Hands-On Practice
+
+#### 1. Fetch the latest branches from GitHub
+```bash
+git fetch origin
+```
+
+#### 2. Inspect the commits on the remote branch
+```bash
+git log --oneline origin/feature/scientific-ops -n 3
+```
+Notice the two commits:
+```text
+15a0a5f (origin/feature/scientific-ops) wip: draft factorial function (not ready for main)
+a89e31f feat: add modulo operation with unit tests
+```
+
+#### 3. Create your own practice branch from `main`
+```bash
+git checkout main
+git checkout -b practice/cherrypick-modulo
+```
+
+#### 4. Cherry-pick ONLY the `modulo` commit (`a89e31f`)
+```bash
+git cherry-pick a89e31f
+```
+
+#### 5. Verify the result
+```bash
+# Check that the commit was copied onto your branch with a new hash
+git log -n 1 --oneline
+
+# Run tests to prove modulo works
+python3 -m unittest discover -s tests
+
+# Check src/calculator.py to verify modulo is present, but NOT the unfinished factorial!
+git diff HEAD~1
+```
+
+#### 6. Push your practice branch to GitHub
+```bash
+git push -u origin practice/cherrypick-modulo
+```
+
+---
+
 ## 🏆 Checklist for Junior Devs
 
 - [ ] Cloned the repo and verified tests pass.
@@ -202,3 +262,4 @@ APP_VERSION = "1.1.0-alpha"
 - [ ] Pushed the feature branch to GitHub.
 - [ ] Successfully simulated and resolved a merge conflict.
 - [ ] Used `git stash` to switch context and resume work.
+- [ ] Practiced `git cherry-pick` using the `feature/scientific-ops` branch.
