@@ -15,6 +15,7 @@ def print_banner():
 
 def show_menu():
     print("Stat")
+    print("Stat")
 
 
 def main():
