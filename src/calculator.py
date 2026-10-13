@@ -38,5 +38,10 @@ def modulo(a: float, b: float) -> float:
         raise ValueError("Cannot modulo by zero!")
     return a % b
 
+
+def factorial(n: int) -> int:
+    """WIP: Factorial calculation (draft, do not release yet)."""
+    raise NotImplementedError("Factorial is not implemented yet!")
+
 APP_VERSION = "1.0.0"
 APP_NAME = "Git"
